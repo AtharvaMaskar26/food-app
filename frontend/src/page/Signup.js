@@ -48,14 +48,14 @@ function Signup() {
       })
 
   }
-console.log(process.env.REACT_APP_SERVER_DOMIN)
+console.log(`${process.env.REACT_APP_SERVER_DOMIN}`)
   const handleSubmit = async(e) => {
     e.preventDefault();
     const { firstName, email, password, confirmPassword } = data;
     if (firstName && email && password && confirmPassword) {
       if (password === confirmPassword) {
     
-          const fetchData = await fetch(`http://localhost:8080/signup`,{
+          const fetchData = await fetch(`${process.env.REACT_APP_SERVER_DOMIN}/signup`,{
             method : "POST",
             headers : {
               "content-type" : "application/json"

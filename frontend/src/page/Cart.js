@@ -30,7 +30,7 @@ const Cart = () => {
           
           
           // alert(`Stripe promise ${stripePromise.collectBankAccountToken}`)
-          const res = await fetch(`http://localhost:8080/create-checkout-session`,{
+          const res = await fetch(`${process.env.REACT_APP_SERVER_DOMIN}/create-checkout-session`,{
             method : "POST",
             headers  : {
               "content-type" : "application/json"

@@ -13,7 +13,7 @@ function App() {
  
   useEffect(()=>{
     (async()=>{
-      const res = await fetch(`https://backend-mern-kowt.onrender.com/product`)
+      const res = await fetch(`https://food-app-mern-production.up.railway.app/product`)
       const resData = await res.json()
       console.log(res);
       dispatch(setDataProduct(resData))
